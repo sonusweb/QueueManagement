@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueManagement", "QueueManagement\QueueManagement.csproj", "{418B9CDE-E3FA-412D-8E35-418D0D33C966}"
+	ProjectSection(ProjectDependencies) = postProject
+		{34B24542-3998-4100-98F8-5BC87ECC1A6A} = {34B24542-3998-4100-98F8-5BC87ECC1A6A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SNTQueueDataHelper", "..\SNTQueueDataHelper\SNTQueueDataHelper\SNTQueueDataHelper.csproj", "{34B24542-3998-4100-98F8-5BC87ECC1A6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SNTSmsCommunication", "..\SNTSmsCommunication\SNTSmsCommunication\SNTSmsCommunication.csproj", "{225E0C1F-1989-4667-A876-0114966C853A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{418B9CDE-E3FA-412D-8E35-418D0D33C966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{418B9CDE-E3FA-412D-8E35-418D0D33C966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{418B9CDE-E3FA-412D-8E35-418D0D33C966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{418B9CDE-E3FA-412D-8E35-418D0D33C966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34B24542-3998-4100-98F8-5BC87ECC1A6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34B24542-3998-4100-98F8-5BC87ECC1A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34B24542-3998-4100-98F8-5BC87ECC1A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34B24542-3998-4100-98F8-5BC87ECC1A6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{225E0C1F-1989-4667-A876-0114966C853A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{225E0C1F-1989-4667-A876-0114966C853A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{225E0C1F-1989-4667-A876-0114966C853A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{225E0C1F-1989-4667-A876-0114966C853A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

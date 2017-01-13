@@ -1,0 +1,16 @@
+C:\ShaienTechProjects\QueueManagement\QueueManagement\bin\QueueManagement.dll
+C:\ShaienTechProjects\QueueManagement\QueueManagement\bin\QueueManagement.pdb
+C:\ShaienTechProjects\QueueManagement\QueueManagement\bin\IntelliSMSDotNet.dll
+C:\ShaienTechProjects\QueueManagement\QueueManagement\bin\Microsoft.ApplicationBlocks.Data.dll
+C:\ShaienTechProjects\QueueManagement\QueueManagement\bin\SNTQueueDataHelper.dll
+C:\ShaienTechProjects\QueueManagement\QueueManagement\bin\SNTSmsCommunication.dll
+C:\ShaienTechProjects\QueueManagement\QueueManagement\bin\SNTQueueDataHelper.pdb
+C:\ShaienTechProjects\QueueManagement\QueueManagement\bin\Microsoft.ApplicationBlocks.Data.pdb
+C:\ShaienTechProjects\QueueManagement\QueueManagement\bin\Microsoft.ApplicationBlocks.Data.xml
+C:\ShaienTechProjects\QueueManagement\QueueManagement\bin\SNTSmsCommunication.pdb
+C:\ShaienTechProjects\QueueManagement\QueueManagement\bin\IntelliSMSDotNet.xml
+C:\ShaienTechProjects\QueueManagement\QueueManagement\obj\Debug\ResolveAssemblyReference.cache
+C:\ShaienTechProjects\QueueManagement\QueueManagement\obj\Debug\QueueManagement.dll
+C:\ShaienTechProjects\QueueManagement\QueueManagement\obj\Debug\QueueManagement.pdb
+C:\ShaienTechProjects\QueueManagement\QueueManagement\bin\Microsoft.ReportViewer.WebForms.dll
+C:\ShaienTechProjects\QueueManagement\QueueManagement\bin\Microsoft.ReportViewer.Common.dll

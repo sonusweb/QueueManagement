@@ -1,0 +1,450 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IntelliSMSDotNet</name>
+    </assembly>
+    <members>
+        <member name="T:Intelli.Common.IO.StreamCopier">
+            <summary>
+            Summary description for StreamCopier.
+            </summary>
+        </member>
+        <member name="T:IntelliSoftware.Internal.IMessagePartsProvider">
+            <summary>
+            Summary description for IMessagePartsContainer.
+            </summary>
+        </member>
+        <member name="T:IntelliSoftware.Internal.IMessageTextProvider">
+            <summary>
+            Summary description for IMessageTextProvider.
+            </summary>
+        </member>
+        <member name="T:IntelliSoftware.Internal.ISubmissionControlInfo">
+            <summary>
+            Summary description for ISubmissionControlInfo.
+            </summary>
+        </member>
+        <member name="T:IntelliSoftware.Internal.SMSGatewayRequestData">
+            <summary>
+            Summary description for SMSGatewayRequestData.
+            </summary>
+        </member>
+        <member name="T:IntelliSoftware.Internal.SMSGatewayRequestData_HTTPMultipartFormPost">
+            <summary>
+            Summary description for SMSGatewayRequestData_HTTPMultipartFormPost.
+            </summary>
+        </member>
+        <member name="T:IntelliSoftware.Internal.SMSGatewayRequestData_HTTPPost">
+            <summary>
+            Summary description for SMSGatewayRequestData_HTTPPost.
+            </summary>
+        </member>
+        <member name="T:IntelliSoftware.IntelliMessage">
+            <summary>
+            Base class for all IntelliSMS Message objects
+            </summary>
+        </member>
+        <member name="T:IntelliSoftware.IntelliSubmission">
+            <summary>
+            Base clas for all IntelliSMS submission objects
+            </summary>
+        </member>
+        <member name="P:IntelliSoftware.IntelliMessage.From">
+            <summary>
+            This is the source/sender's phone number
+            </summary>
+        </member>
+        <member name="T:IntelliSoftware.IntelliSMS">
+            <summary>
+            DotNet API for the IntelliSoftware SMS Gateway
+            </summary>
+        </member>
+        <member name="M:IntelliSoftware.IntelliSMS.SendMsg(System.String,System.String,System.String)">
+            <summary>
+            Sends an SMS message via the Internet Gateway. 
+            </summary>
+            <param name="To">This is the destination phone number</param>
+            <param name="Message">The content of the text message</param>
+            <param name="From">This is the source/sender's phone number</param>
+            <returns>Unique message ID</returns>
+        </member>
+        <member name="M:IntelliSoftware.IntelliSMS.SendMsgWithUserContext(System.String,System.String,System.String,System.String)">
+            <summary>
+            Sends an SMS message (with user context) via the Internet Gateway
+            </summary>
+            <param name="To">This is the destination phone number</param>
+            <param name="Message">The content of the text message</param>
+            <param name="From">This is the source/sender's phone number</param>
+            <param name="UserContext">User context for this message. This can be used to track reply messages.</param>
+            <returns>Unique message ID</returns>
+        </member>
+        <member name="M:IntelliSoftware.IntelliSMS.SendMsgToMultipleRecipients(System.Collections.Specialized.StringCollection,System.String,System.String)">
+            <summary>
+            Sends an SMS message to multiple recipients via the Internet Gateway. 
+            </summary>
+            <param name="ToList">List of destination phone numbers</param>
+            <param name="Message">The content of the text message</param>
+            <param name="From">This is the source/sender's phone number</param>
+            <returns>This collection is populated with the send status for each recipient</returns>
+        </member>
+        <member name="M:IntelliSoftware.IntelliSMS.SendUnicodeMsg(System.Collections.Specialized.StringCollection,System.String,System.String)">
+            <summary>
+            Sends a Unicode SMS message to multiple recipients via the Internet Gateway. 
+            </summary>
+            <param name="ToList">List of destination phone numbers</param>
+            <param name="Message">The content of the text message</param>
+            <param name="From">This is the source/sender's phone number</param>
+            <returns>This collection is populated with the send status for each recipient</returns>
+        </member>
+        <member name="M:IntelliSoftware.IntelliSMS.SendUnicodeMsgHex(System.Collections.Specialized.StringCollection,System.String,System.String)">
+            <summary>
+            Sends a Unicode SMS message to multiple recipients via the Internet Gateway. 
+            </summary>
+            <param name="ToList">List of destination phone numbers</param>
+            <param name="MessageHex">The content of the text message, encoded as ASCII Hex.</param>
+            <param name="From">This is the source/sender's phone number</param>
+            <returns>This collection is populated with the send status for each recipient</returns>
+        </member>
+        <member name="M:IntelliSoftware.IntelliSMS.SendBinaryMsg(System.Collections.Specialized.StringCollection,System.String,System.String,System.String)">
+            <summary>
+            Sends a Binary SMS message via the Internet Gateway. Binary Messages can be used to send SmartMessages, such as Ringtones and Logos. 
+            </summary>
+            <param name="ToList">List of destination phone numbers</param>
+            <param name="UserDataHexHeader">PDU User Data Header encoded as ASCII Hex (optional)</param>
+            <param name="UserDataHex">PDU User Data encoded as ASCII Hex</param>
+            <param name="From">This is the source/sender's phone number</param>
+            <returns>This collection is populated with the send status for each recipient</returns>
+        </member>
+        <member name="M:IntelliSoftware.IntelliSMS.SendWapPushMsg(System.Collections.Specialized.StringCollection,System.String,System.String,System.String)">
+            <summary>
+            Sends a WAP PUSH message via the Internet Gateway. WAP PUSH messages can send multimedia content, such as an Image, Wallpaper, Ringtone or a link to WAP website. 
+            </summary>
+            <param name="ToList">List of destination phone numbers</param>
+            <param name="Title">Display Text for WAP PUSH message</param>
+            <param name="HRef">URL link to resource ( should start with 'http://' or 'https://' )</param>
+            <param name="From">This is the source/sender's phone number</param>
+            <returns>This collection is populated with the send status for each recipient</returns>
+        </member>
+        <member name="M:IntelliSoftware.IntelliSMS.SendMMSMessage(System.Collections.Specialized.StringCollection,IntelliSoftware.MMSMessage)">
+            <summary>
+            Sends a MMS Message. MMS messages can send multimedia content, such as an Image, Text, Video, Audio. 
+            </summary>
+            <param name="ToList">List of destination phone numbers</param>
+            <param name="Message">MMS Message to be sent</param>
+            <returns>This collection is populated with the send status for each recipient</returns>
+        </member>
+        <member name="M:IntelliSoftware.IntelliSMS.GetBalance">
+            <summary>
+            Obtains the available credits on an account. 
+            </summary>
+            <returns>Number of remaining credits</returns>
+        </member>
+        <member name="P:IntelliSoftware.IntelliSMS.PrimaryGateway">
+            <summary>
+            Address of the IntelliSoftware Primary HTTP Gateway
+            </summary>
+        </member>
+        <member name="P:IntelliSoftware.IntelliSMS.BackupGateway">
+            <summary>
+            Address of the IntelliSoftware Backup HTTP Gateway
+            </summary>
+        </member>
+        <member name="P:IntelliSoftware.IntelliSMS.Username">
+            <summary>
+            This is the username of your account
+            </summary>
+        </member>
+        <member name="P:IntelliSoftware.IntelliSMS.Password">
+            <summary>
+            This is the password for your account
+            </summary>
+        </member>
+        <member name="P:IntelliSoftware.IntelliSMS.ProxyAddress">
+            <summary>
+            If a proxy server is required to access the internet then set this property to the address of your proxy server
+            </summary>
+        </member>
+        <member name="P:IntelliSoftware.IntelliSMS.ProxyUsername">
+            <summary>
+            If your proxy server requires authentication, set this property to required username
+            </summary>
+        </member>
+        <member name="P:IntelliSoftware.IntelliSMS.ProxyPassword">
+            <summary>
+            If your proxy server requires authentication, set this property to required password
+            </summary>
+        </member>
+        <member name="P:IntelliSoftware.IntelliSMS.MaxConCatMsgs">
+            <summary>
+            Maximium number of concatenated SMS messages that will be sent per recipient (Default is 1) 
+            </summary>
+        </member>
+        <member name="T:IntelliSoftware.IntelliSMSClientSideException">
+            <summary>
+            Exception for Client-Side generated exceptions
+            </summary>
+        </member>
+        <member name="M:IntelliSoftware.IntelliSMSClientSideException.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="Message">Error message</param>
+        </member>
+        <member name="T:IntelliSoftware.ResultCodes">
+            <summary>
+            Error received from the IntelliSoftware SMS Internet gateway
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.ResultCodes.OK">
+            <summary>
+            Request completed OK
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.ResultCodes.NoUsername">
+            <summary>
+            Username paramter was missing
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.ResultCodes.NoPassword">
+            <summary>
+            Password paramter was missing
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.ResultCodes.NoTo">
+            <summary>
+            To paramter was missing
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.ResultCodes.NoText">
+            <summary>
+            Text paramter was missing
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.ResultCodes.LoginInvalid">
+            <summary>
+            Username/password is invalid
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.ResultCodes.InsufficientCredit">
+            <summary>
+            Insufficent credit in your account to complete the request
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.ResultCodes.GatewayError">
+            <summary>
+            An error occurred internal to the IntelliSoftware SMS Gateway, retry your request later
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.ResultCodes.InternalError">
+            <summary>
+            An error occurred internal to the IntelliSoftware SMS Gateway, retry your request later
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.ResultCodes.HTTPConnectionError">
+            <summary>
+            A HTTP error occurred trying to connect to the IntelliSoftware SMS Gateway, check proxy settings
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.ResultCodes.InvalidNumber">
+            <summary>
+            The recipient number is invalid
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.ResultCodes.InvalidRequest">
+            <summary>
+            The request is invalid
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.ResultCodes.ServerTooBusy">
+            <summary>
+            The IntelliSoftware SMS Gateway, please try again after a short delay
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.ResultCodes.MsgIdInvalid">
+            <summary>
+            The specified MessageId is invalid for your account
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.ResultCodes.ParameterMissing">
+            <summary>
+            A mandatory parameter is missing
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.ResultCodes.ParameterInvalid">
+            <summary>
+            A provide parameter is invalid
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.ResultCodes.AccountExists">
+            <summary>
+            Account already exists
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.ResultCodes.TooManyNumbers">
+            <summary>
+            Too many recipients specified
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.ResultCodes.DelayRequired">
+            <summary>
+            Internal use only
+            </summary>
+        </member>
+        <member name="T:IntelliSoftware.MessageStatus">
+            <summary>
+            Status of the message sent through the IntelliSoftware SMS Gateway
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.MessageStatus.MessageQueued">
+            <summary>
+            Message is queued on the IntelliSoftware Messaging Server
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.MessageStatus.MessageSent">
+            <summary>
+            Message has been sent by the IntelliSoftware Messaging Server
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.MessageStatus.MessageDelivered">
+            <summary>
+            Delivery report has been received from the recipients handset
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.MessageStatus.ErrorWithRequest">
+            <summary>
+            Error occured with the request
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.MessageStatus.UnableToDeliver">
+            <summary>
+            Unable to delivery message to recipient, check phone number
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.MessageStatus.RoutingError">
+            <summary>
+            Unable to delivery message to recipient, check phone number
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.MessageStatus.MessageExpired">
+            <summary>
+            Message expired before it could be delivered to the recipient
+            </summary>
+        </member>
+        <member name="T:IntelliSoftware.IntelliSMSException">
+            <summary>
+            Represents error returned by the IntelliSoftware SMS Internet gateway
+            </summary>
+        </member>
+        <member name="F:IntelliSoftware.IntelliSMSException.ResultCode">
+            <summary>
+            Error received from the IntelliSoftware SMS Internet gateway
+            </summary>
+        </member>
+        <member name="T:IntelliSoftware.MessagePart">
+            <summary>
+            Message Part
+            </summary>
+        </member>
+        <member name="P:IntelliSoftware.MessagePart.Filename">
+            <summary>
+            Filename of the Message Part
+            </summary>
+        </member>
+        <member name="P:IntelliSoftware.MessagePart.ContentType">
+            <summary>
+            Content Type of the Message Part
+            </summary>
+        </member>
+        <member name="P:IntelliSoftware.MessagePart.Text">
+            <summary>
+            Text Content of the Message Part
+            </summary>
+        </member>
+        <member name="P:IntelliSoftware.MessagePart.SourceFilename">
+            <summary>
+            Full path and filename of the file that contains the Message Part content
+            </summary>
+        </member>
+        <member name="P:IntelliSoftware.MessagePart.SourceStream">
+            <summary>
+            An open stream that contains the content for the Message Part.
+            NOTE: Caller is responsible for closing the stream after call to SendMessage.
+            </summary>
+        </member>
+        <member name="T:IntelliSoftware.MessagePartCollection">
+            <summary>
+            Collection of Message Parts
+            </summary>
+        </member>
+        <member name="M:IntelliSoftware.MessagePartCollection.Add(IntelliSoftware.MessagePart)">
+            <summary>
+            Add Message Part
+            </summary>
+        </member>
+        <member name="M:IntelliSoftware.MessagePartCollection.IndexOf(IntelliSoftware.MessagePart)">
+            <summary>
+            Gets Index of Message Part
+            </summary>
+        </member>
+        <member name="M:IntelliSoftware.MessagePartCollection.Insert(System.Int32,IntelliSoftware.MessagePart)">
+            <summary>
+            Insert Message Part at index
+            </summary>
+        </member>
+        <member name="M:IntelliSoftware.MessagePartCollection.Remove(IntelliSoftware.MessagePart)">
+            <summary>
+            Remove Message Part
+            </summary>
+        </member>
+        <member name="M:IntelliSoftware.MessagePartCollection.Contains(IntelliSoftware.MessagePart)">
+            <summary>
+            Test if collection contains Message Part
+            </summary>
+        </member>
+        <member name="P:IntelliSoftware.MessagePartCollection.Item(System.Int32)">
+            <summary>
+            Retrieve Message Part by Index
+            </summary>
+        </member>
+        <member name="T:IntelliSoftware.MMSMessage">
+            <summary>
+            MMS Message
+            </summary>
+        </member>
+        <member name="P:IntelliSoftware.MMSMessage.Subject">
+            <summary>
+            MMS Message Subject
+            </summary>
+        </member>
+        <member name="P:IntelliSoftware.MMSMessage.MessageParts">
+            <summary>
+            Collection containing MMSMessage Parts
+            </summary>
+        </member>
+        <member name="T:IntelliSoftware.SendStatus">
+            <summary>
+            Send status for one recipient
+            </summary>
+        </member>
+        <member name="P:IntelliSoftware.SendStatus.To">
+            <summary>
+            Recipient's phone number that this send status is relavent
+            </summary>
+        </member>
+        <member name="P:IntelliSoftware.SendStatus.MessageId">
+            <summary>
+            Unique message ID
+            </summary>
+        </member>
+        <member name="P:IntelliSoftware.SendStatus.ResultCode">
+            <summary>
+            Submission status for this recipient
+            </summary>
+        </member>
+        <member name="T:IntelliSoftware.SendStatusCollection">
+            <summary>
+            Contains the send status for each recipients
+            </summary>
+        </member>
+    </members>
+</doc>

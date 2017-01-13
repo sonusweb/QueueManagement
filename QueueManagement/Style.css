@@ -1,0 +1,62 @@
+﻿body {
+    font-family: Verdana;
+    font-size: medium;
+    margin: 0px;
+}
+
+h1, h2 {
+    margin: 0px;
+}
+
+#topContent {
+    text-align: right;
+    background-color: #600;
+    color: White;
+    font-size: x-large;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    height: 50px;
+}
+
+#topContent a {
+    text-decoration: none;
+    color: White;
+}
+
+#leftContent {
+    width: 230px;    
+    padding: 10px;
+    font-size: 90%;
+    text-align: left;
+    position: absolute;
+    top: 60px;
+    margin-top: 10px;
+    left: 0px;
+}
+
+#leftContent h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    border-top: dotted 1px #660;
+    border-bottom: dotted 1px #660;
+}
+
+#mainTopContent {
+    text-align: left;
+    margin-left: 250px;
+    padding: 10px;
+    height:300px;
+}
+#mainBottomContent 
+{
+	text-align: left;
+    margin-left: 250px;
+    padding: 10px;
+    height:200px;
+}
+#footerContent {
+    text-align: center;
+    padding: 5px;
+}
